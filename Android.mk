@@ -247,6 +247,9 @@ endif # TARGET_NEEDS_DTBOIMAGE
 $(PRODUCT_OUT)/kernel: $(KERNEL_BIN)
 	cp $(KERNEL_BIN) $(PRODUCT_OUT)/kernel
 
+.PHONY: kernel
+kernel: $(PRODUCT_OUT)/kernel
+
 ifeq ($(TARGET_NEEDS_DTBOIMAGE),true)
 .PHONY: $(PRODUCT_OUT)/dtbo.img
 $(PRODUCT_OUT)/dtbo.img: $(KERNEL_DTBO_OUT)
