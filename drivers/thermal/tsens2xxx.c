@@ -143,7 +143,7 @@ dbg:
 }
 
 static int tsens_tm_activate_trip_type(struct tsens_sensor *tm_sensor,
-			int trip, enum thermal_trip_activation_mode mode)
+			int trip, u32 mode)
 {
 	struct tsens_device *tmdev = NULL;
 	unsigned int reg_cntl, mask;
